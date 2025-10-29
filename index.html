@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pembayaran Premium</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container" id="main-menu">
+    <h1>💳 Pembayaran Online</h1>
+    <p>Silahkan Order Barang Di Bawah Ini!</p>
+
+    <img src="https://i.pinimg.com/originals/ed/94/1e/ed941e07eacfc5d24a50c1ec84e1c09c.jpg" alt="anime" class="banner">
+
+    <button onclick="showPay()">💰 Bayar Sekarang</button>
+    <button onclick="showMenu()">📋 Menu Lainnya</button>
+    <a href="mailto:?subject=Bantuan Pembayaran&body=Halo admin, saya ingin tanya tentang pembayaran.">
+      <button>📩 Hubungi CS</button>
+    </a>
+    <a href="https://t.me/Zyuuofficial" target="_blank">
+      <button>💬 Contact via Telegram</button>
+    </a>
+    <button onclick="showOwner()">👤 Tentang Owner</button>
+    <button onclick="showMusic()">🎵 Play Music</button>
+  </div>
+
+  <!-- Halaman Bayar -->
+  <div class="container hidden" id="pay-page">
+    <h2>Pilih Metode Pembayaran</h2>
+    <button onclick="window.open('https://photos.app.goo.gl/HTAv9snnyBURFpGy7')">[ QRIS ]</button>
+    <button onclick="window.open('https://photos.app.goo.gl/Z4xKPYzVP5KdFkkw7')">[ DANA ]</button>
+    <button onclick="goHome()">⬅️ Kembali ke beranda</button>
+  </div>
+
+  <!-- Halaman Menu -->
+  <div class="container hidden" id="menu-page">
+    <h2>𝗠𝗲𝗻𝘂 𝗗𝗘𝗕𝗦𝗧𝗘𝗖𝗨𝗨</h2>
+    <p>- 𝗦𝗖𝗥𝗜𝗣𝗧 𝗕𝗨𝗚<br>- 𝗠𝗨𝗥𝗕𝗨𝗚<br>- 𝗣𝗔𝗡𝗘𝗟 𝗣𝗥𝗜𝗩𝗔𝗧𝗘</p>
+    <button onclick="goHome()">⬅️ Kembali ke beranda</button>
+  </div>
+
+  <!-- Halaman Owner -->
+  <div class="container hidden" id="owner-page">
+    <h2>𝗡𝗔𝗠𝗘 : 𝗗𝗘𝗕<br>𝗔𝗚𝗔𝗠𝗔 : 𝗜𝗦𝗟𝗔𝗠<br>𝗥𝗢𝗟𝗘 : 𝗥𝗘𝗦𝗘𝗟𝗟𝗘𝗥<br>𝗖𝗢𝗡𝗧𝗔𝗖𝗧 : 𝗧𝗘𝗟𝗘𝗚𝗥𝗔𝗠</h2>
+    <button onclick="goHome()">⬅️ Kembali ke beranda</button>
+  </div>
+
+  <!-- Halaman Musik -->
+  <div class="container hidden" id="music-page">
+    <h2>Pilih Lagu</h2>
+    <button onclick="playMusic('https://ssstik.io/1761734174180.mp3.mp4')">[ EVERYTHING YOU ARE ]</button>
+    <button onclick="playMusic('https://ssstik.io/1761734298119.mp3.mp4')">[ RUMAH KE RUMAH ]</button>
+    <button onclick="playMusic('https://ssstik.io/1761734452737.mp3')">[ hoRRReg ]</button>
+    <button onclick="stopMusic()">[ STOP MUSIC ]</button>
+    <button onclick="goHome()">⬅️ Kembali ke beranda</button>
+    <audio id="player" controls hidden></audio>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
